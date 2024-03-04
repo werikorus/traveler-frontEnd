@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAMA","sources":["public/styles.css"],"sourcesContent":["body{\r\n  padding: 0;\r\n  margin: 0;\r\n  /*display: flexbox;*/\r\n}\r\n\r\n#login-screen-frame{\r\n  width: 100vw;\r\n  height: 100vh;\r\n}"],"names":[],"version":3,"file":"index.c180ac0f.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -1,0 +1,37 @@
+#main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#login-area-fields {
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 416px;
+  height: 371px;
+  margin: auto;
+  display: flex;
+}
+
+#img-travelers {
+  width: 852px;
+  height: 820px;
+  left: -54px;
+}
+
+#email-field, #password-field {
+  border: 1px solid #bbb;
+  width: 416px;
+  height: 72px;
+  padding-left: 25px;
+}
+
+#email-field {
+  border-radius: 10px 10px 0 0;
+}
+
+#password-field {
+  border-radius: 0 0 10px 10px;
+}
+/*# sourceMappingURL=login.0be4ba63.css.map */

@@ -1,0 +1,36 @@
+#main{
+  margin: 0;
+  padding: 0;
+  display: flex;  
+}
+
+#login-area-fields{  
+  align-self: center;
+  align-items: center;
+  margin: auto;
+  width: 416px;
+  height: 371px;
+  display: flex;
+  flex-direction: column;
+}
+
+#img-travelers{
+  width: 852px;
+  height: 820px;
+  left: -54px;
+}
+
+#email-field, #password-field{
+  padding-left: 25px;
+  width: 416px;
+  height: 72px;
+  border: 1 solid rgb(187, 187, 187);
+}
+
+#email-field{  
+  border-radius: 10px 10px 0 0;
+}
+
+#password-field{
+  border-radius: 0 0 10px 10px;
+}

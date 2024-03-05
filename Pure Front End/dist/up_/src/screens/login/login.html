@@ -1,16 +1,36 @@
 
 <main id="main">
-  <link rel="stylesheet" href="/up_/src/screens/login/login.0be4ba63.css">
-  <img id="img-travelers" src="/travelers.56286642.png" alt="travelers-img">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <script src="/up_/src/screens/login/login.70ffeb07.js" defer=""></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/up_/src/screens/login/login.b83e1172.css">
+  <img id="img-travelers" src="/travelers.56286642.png" alt="travelers-img">
+
   <div id="login-area-fields">
-    <h1>Fazer Login</h1>
+    <h1 id="do-login-label">Fazer Login</h1>
     <input type="text" name="email" id="email-field" placeholder="E-mail">
-    <input type="password" name="password" id="password-field" placeholder="Senha">
-    <input type="checkbox" name="lembrar-me-checkbox" id="lembrar-me-checkbox">
-    <label for="lembrar-me-label"></label>
-    <a href="#">Esqueci minha senha</a>
-    <button>Acessar plataforma</button>
-     <label for="">Acesso restrito à colaboradores</label>
+    <input type="password" name="password" id="password-field" placeholder="Senha">    
+    <div id="labels-checkbox-area">
+      <input type="checkbox" name="lembrar-me-checkbox" id="remember-me-checkbox">
+      <label for="lembrar-me" id="remember-me-label">Lembrar-me</label>
+      <a href="#" onclick="handleRestrictAccess()" id="forgot-my-password-label">Esqueci minha senha</a>
+    </div>    
+    <!--<button id="enter-platform-button" onclick="handleLogin()">Acessar plataforma</button>-->
+    <a id="enter-platform-button" href="/up_/src/screens/citiesList/citiesList.html">Acessar plataforma</a>
+
+    <div id="restrict-access-area" onclick="handleRestrictAccess()">
+      <img src="/alert-2-svgrepo-com.4a1e5e7e.svg" alt="alert-icon" id="alert-icon">
+      <label for="access" id="access-label">Acesso restrito à sócios e moderadores</label>
+    </div>
+    <script>const handleLogin = ()=>{
+    window.navigator("/Home");
+};
+const handleRestrictAccess = ()=>{
+    window.alert("Not implemented yet!");
+};
+
+</script>
   </div>
+  
 </main>
-<script src="/login.8605af4f.js"></script>

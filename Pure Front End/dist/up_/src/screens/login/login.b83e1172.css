@@ -76,10 +76,14 @@
   background-color: #f25d27;
   border: none;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 4rem;
   margin-top: 1rem;
   font-size: 18px;
+  text-decoration: none;
+  display: flex;
 }
 
 #enter-platform-button:hover {
@@ -104,4 +108,4 @@
   width: 160px;
   margin-left: 1rem;
 }
-/*# sourceMappingURL=login.0be4ba63.css.map */
+/*# sourceMappingURL=login.b83e1172.css.map */

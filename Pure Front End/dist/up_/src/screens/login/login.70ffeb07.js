@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"gbXMy":[function(require,module,exports) {
+})({"FrOqC":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "fe4256060641b553";
+module.bundle.HMR_BUNDLE_ID = "883bbdab70ffeb07";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,8 +583,53 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"bNKaB":[function(require,module,exports) {
+},{}],"yw8oI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "handleLogin", ()=>handleLogin);
+const handleLogin = ()=>{
+    const emailField = document.getElementById("email-field");
+    const passwordField = document.getElementById("password-field");
+    const checkBoxRememberAccess = document.getElementById("remember-me-checkbox");
+    if (checkBoxRememberAccess.value === "checked") {
+        const accessFields = {
+            email: emailField,
+            password: passwordField
+        };
+        localStorage.setItem("accessLogin", accessFields);
+    }
+};
 
-},{}]},["gbXMy","bNKaB"], "bNKaB", "parcelRequire042c")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
-//# sourceMappingURL=index.0641b553.js.map
+},{}]},["FrOqC","yw8oI"], "yw8oI", "parcelRequire042c")
+
+//# sourceMappingURL=login.70ffeb07.js.map

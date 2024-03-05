@@ -1,0 +1,38 @@
+#root{  
+  display: flex;  
+  width: 100%;
+  height: 100%;
+  background-color: aqua; 
+}
+
+#aside-board{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;   
+  align-content: center;
+  width: 96px;  
+  background-color: #F25D27;
+}
+
+#header-board{  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background-color: #DCE2E5;
+}
+
+#add-profile-button{
+  width: 10rem;
+  height: 3rem;
+  background-color: white;
+  text-decoration: none;
+}
+
+#board-main-area{  
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+  height: 100%;
+  background-color: white;
+}

@@ -2,21 +2,19 @@ body {
   box-sizing: border-box;
   font-optical-sizing: auto;
   background-color: #f5f8fa;
-  justify-content: center;
-  width: 100%;
-  max-width: 1080px;
-  height: 100%;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: Barlow, sans-serif;
-  font-style: normal;
-  font-weight: 100;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
 }
 
 #login-screen-frame {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 @media (width <= 700px) {

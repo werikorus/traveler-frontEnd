@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"gVHCb":[function(require,module,exports) {
+})({"j9Vc8":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "883bbdab70ffeb07";
+module.bundle.HMR_BUNDLE_ID = "0e67aa5e1dd373a8";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,22 +583,63 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"yw8oI":[function(require,module,exports) {
+},{}],"5OOYo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "handleLogin", ()=>handleLogin);
-const handleLogin = ()=>{
-    const emailField = document.getElementById("email-field");
-    const passwordField = document.getElementById("password-field");
-    const checkBoxRememberAccess = document.getElementById("remember-me-checkbox");
-    if (checkBoxRememberAccess.value === "checked") {
-        const accessFields = {
-            email: emailField,
-            password: passwordField
-        };
-        localStorage.setItem("accessLogin", accessFields);
-    }
+parcelHelpers.export(exports, "cityCardList", ()=>cityCardList);
+var _citiesList = require("../../mocks/citiesList");
+const createElements = (city, key)=>{
+    //create the card for city
+    const cityCard = document.createElement("div");
+    cityCard.setAttribute("id", `cityCard-00${key}`);
+    cityCard.setAttribute("class", "divCityCard");
+    //create img element
+    const cityImage = document.createElement("img");
+    cityImage.setAttribute("id", "cityImg-id");
+    (0, _citiesList.citiesList).setAttribute("src", `${item?.imgUrl || "noImgYet"}`);
+    //create city title
+    const cityName = document.createElement("h1");
+    cityName.setAttribute("id", "cityName-id");
+    const cityText = document.createTextNode(item?.cityName || "noNameCityYet");
+    cityName.appendChild(cityText);
+    //create locals quantity
+    const localQuantity = document.createElement("label");
+    localQuantity.setAttribute("id", "quantityLocals-id");
+    const localText = document.createTextNode(item?.localQuantity || "noLocalsYet");
+    localQuantity.appendChild(localText);
+    //finally[1] we put all elements inside the card
+    cityCard.appendChild(cityImage);
+    cityCard.appendChild(cityName);
+    cityCard.appendChild(localQuantity);
+    //finally[2] we pull the card on the board
+    const divBoard = document.getElementById("board-main-area");
+    divBoard.appendChild(cityCard);
 };
+const cityCardList = ()=>{
+    cityCardList.map((item1, key)=>createElements(item1, key));
+};
+
+},{"../../mocks/citiesList":"1ywtp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1ywtp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "citiesList", ()=>citiesList);
+const citiesList = [
+    {
+        cityName: "Florian\xf3polis",
+        localQuantity: 12,
+        imgUrl: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4"
+    },
+    {
+        cityName: "Guarda do Emba\xfa",
+        localQuantity: 5,
+        imgUrl: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4"
+    },
+    {
+        cityName: "Bombinhas",
+        localQuantity: 3,
+        imgUrl: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4"
+    }
+];
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -630,6 +671,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["gVHCb","yw8oI"], "yw8oI", "parcelRequire042c")
+},{}]},["j9Vc8","5OOYo"], "5OOYo", "parcelRequire042c")
 
-//# sourceMappingURL=login.70ffeb07.js.map
+//# sourceMappingURL=citiesList.1dd373a8.js.map

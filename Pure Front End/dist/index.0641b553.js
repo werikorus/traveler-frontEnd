@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"gbXMy":[function(require,module,exports) {
+})({"RtcJA":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -584,7 +584,100 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"bNKaB":[function(require,module,exports) {
+var _cityCards = require("./components/cityCards/cityCards");
+var _cityCardsStylesCss = require("./components/cityCards/cityCards.styles.css");
+(0, _cityCards.cityCardList)();
 
-},{}]},["gbXMy","bNKaB"], "bNKaB", "parcelRequire042c")
+},{"./components/cityCards/cityCards":"5OOYo","./components/cityCards/cityCards.styles.css":"co7HP"}],"5OOYo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cityCardList", ()=>cityCardList);
+var _citiesList = require("../../mocks/citiesList");
+const createElements = (city, key)=>{
+    //create the card for city
+    const cityCard = document.createElement("DIV");
+    cityCard.setAttribute("id", `cityCard-00${key}`);
+    cityCard.setAttribute("class", "divCityCard");
+    //create img element
+    const cityImage = document.createElement("IMG");
+    cityImage.setAttribute("id", "cityImg-id");
+    cityImage.setAttribute("name", "cityImg-name");
+    cityImage.setAttribute("alt", "x");
+    cityImage.setAttribute("src", `${city?.imgUrl || "notUrlYet"}`);
+    //create city title
+    const cityName = document.createElement("h1");
+    cityName.setAttribute("id", "cityName-id");
+    const cityText = document.createTextNode(city?.cityName || "noNameCityYet");
+    cityName.appendChild(cityText);
+    //create locals quantity label
+    const localQuantity = document.createElement("label");
+    localQuantity.setAttribute("id", "quantityLocals-id");
+    const localText = document.createTextNode(city?.localQuantity || "noLocalsYet");
+    localQuantity.appendChild(localText);
+    //finally[1] we put all elements inside the card
+    cityCard.appendChild(cityImage);
+    cityCard.appendChild(cityName);
+    cityCard.appendChild(localQuantity);
+    //finally[2] we pull the card on the board
+    const divBoard = document.getElementById("board-main-area");
+    if (divBoard) divBoard.appendChild(cityCard);
+};
+const cityCardList = ()=>{
+    (0, _citiesList.citiesList).map((item, key)=>createElements(item, key));
+};
+
+},{"../../mocks/citiesList":"1ywtp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1ywtp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "citiesList", ()=>citiesList);
+const citiesList = [
+    {
+        cityName: "Florian\xf3polis",
+        localQuantity: 12,
+        imgUrl: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4"
+    },
+    {
+        cityName: "Guarda do Emba\xfa",
+        localQuantity: 5,
+        imgUrl: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4"
+    },
+    {
+        cityName: "Bombinhas",
+        localQuantity: 3,
+        imgUrl: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"co7HP":[function() {},{}]},["RtcJA","bNKaB"], "bNKaB", "parcelRequire042c")
 
 //# sourceMappingURL=index.0641b553.js.map

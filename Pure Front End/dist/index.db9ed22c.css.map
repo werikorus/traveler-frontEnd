@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["src/components/cityCards/cityCards.styles.css"],"sourcesContent":[".divCityCard{\r\n  width: 100px;\r\n  height: 150px;\r\n  background-color: yellow;\r\n}"],"names":[],"version":3,"file":"index.db9ed22c.css.map","sourceRoot":"/__parcel_source_root/"}
